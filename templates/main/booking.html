@@ -1,0 +1,124 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Customer Booking | Anas Hospital</title>
+  <link rel="stylesheet" href="{% static 'main/styles.css' %}" />
+</head>
+<body>
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb1"></span>
+    <span class="orb orb2"></span>
+    <span class="orb orb3"></span>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">AH</div>
+        <div>
+          <div class="brand-name">Anas Hospital</div>
+          <div class="brand-sub">Customer Booking • Fast Confirmation</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/book/">Booking</a>
+        <a href="/doctor/">Doctors</a>
+        <a href="/admin/">Admin Booking</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 style="margin:0 0 8px;">Book Appointment</h1>
+        <p class="section-sub">Select your category and we’ll route your request to the correct staff.</p>
+
+        <div class="two-col" style="margin-top:16px;">
+          <div>
+            <div class="card" style="padding:18px;">
+              <h2 style="margin-top:0;">Customer Booking Form</h2>
+              <form method="post" action="/admin/" onsubmit="return true;">
+                <p class="form-note" style="margin-top:0;">
+                  This demo form currently sends the booking to <b>Django Admin</b> for staff confirmation.
+                </p>
+
+                {% csrf_token %}
+
+                <label class="field-label">Full Name</label>
+                <input class="field-input" name="full_name" placeholder="Your name" required />
+
+                <label class="field-label">Phone</label>
+                <input class="field-input" name="phone" placeholder="10 digit mobile" required />
+
+                <label class="field-label">Category</label>
+                <select class="field-input" name="category" required>
+                  <option value="">Select category</option>
+                  <option value="dental">Dental (Dr. Sabith - MMBS)</option>
+                  <option value="orthomology">Orthomology (Dr. Razi)</option>
+                  <option value="general">General (Dr. Hashir Ali)</option>
+                  <option value="labour_room">Labour Room (Dr. Firdous)</option>
+                </select>
+
+                <label class="field-label">Preferred Date</label>
+                <input class="field-input" type="date" name="date" required />
+
+                <label class="field-label">Message (optional)</label>
+                <textarea class="field-input" name="message" rows="3" placeholder="Any symptoms / notes"></textarea>
+
+                <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+                  <button class="btn" type="submit">Submit Booking</button>
+                  <a class="btn btn-ghost" href="/">Cancel</a>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div>
+            <div class="card" style="padding:18px;">
+              <h2 style="margin-top:0;">Booking Guidelines</h2>
+              <ul class="checklist">
+                <li>Choose the correct category (Dental / Orthomology / General / Labour Room)</li>
+                <li>Staff will confirm and assign the doctor</li>
+                <li>Bring ID proof for verification (if requested)</li>
+              </ul>
+              <div class="form-note" style="margin-top:14px;">
+                <p><b>Tip:</b> If you are not sure, select <b>General</b> and our staff will guide you.</p>
+              </div>
+            </div>
+
+            <div class="card" style="padding:18px; margin-top:14px;">
+              <h2 style="margin-top:0;">Direct Links</h2>
+              <div class="hero-card-list">
+                <a class="btn btn-ghost" href="/admin/">Admin Booking Page</a>
+                <a class="btn btn-ghost" href="/doctor/">Doctor Section</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-brand">Anas Hospital</div>
+        <div class="footer-small">© {% now 'Y' %} • Dr. Anas Rahman</div>
+      </div>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/book/">Booking</a>
+        <a href="/doctor/">Doctors</a>
+        <a href="/admin/">Admin</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+

@@ -1,0 +1,231 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anas Hospital | Dr. Anas Rahman</title>
+  <link rel="stylesheet" href="{% static 'main/styles.css' %}" />
+</head>
+<body>
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb1"></span>
+    <span class="orb orb2"></span>
+    <span class="orb orb3"></span>
+  </div>
+
+  <header class="site-header">
+
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">AH</div>
+        <div>
+          <div class="brand-name">Anas Hospital</div>
+          <div class="brand-sub">Main • Managed by Dr. Anas Rahman MBBS</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Care you can trust.</h1>
+          <p class="lead">
+            Welcome to Anas Hospital. We provide compassionate medical care and
+            reliable treatment with a patient-first approach.
+          </p>
+        <div class="cta-row">
+            <a class="btn" href="/book/">Customer Booking</a>
+            <a class="btn btn-ghost" href="#services">View services</a>
+          </div>
+
+        </div>
+
+        <div class="hero-card" aria-label="Doctor highlight">
+          <div class="hero-card-title">Hospital Doctor</div>
+          <div class="doctor-name">Dr. Anas Rahman</div>
+          <div class="doctor-role">MBBS • Specialist Care</div>
+          <div class="hero-card-list">
+            <div class="pill">Appointment Booking</div>
+            <div class="pill">Lab & Diagnostics</div>
+            <div class="pill">Friendly Staff</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2>Our Services</h2>
+        <p class="section-sub">A quick overview of the services available at Anas Hospital.</p>
+
+        <div class="cards">
+          <article class="card">
+            <h3>General Consultation</h3>
+            <p>Expert guidance for common health concerns and checkups.</p>
+          </article>
+          <article class="card">
+            <h3>Emergency Care</h3>
+            <p>Fast attention for urgent situations with trained staff.</p>
+          </article>
+          <article class="card">
+            <h3>Lab & Diagnostics</h3>
+            <p>Accurate testing to support effective diagnosis and treatment.</p>
+          </article>
+          <article class="card">
+            <h3>Health Screening</h3>
+            <p>Preventive screening programs for early detection.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section section-alt">
+      <div class="container">
+        <h2>About Anas Hospital</h2>
+        <div class="two-col">
+          <div>
+            <p>
+              We believe great healthcare is built on clarity, respect, and consistency.
+              Our team focuses on safe treatment, thorough explanations, and supportive follow-up.
+            </p>
+            <ul class="checklist">
+              <li>Patient-friendly environment</li>
+              <li>Reliable care plans</li>
+              <li>Modern facilities and tools</li>
+            </ul>
+          </div>
+          <div class="about-metric">
+            <div class="metric">
+              <div class="metric-num">10+</div>
+              <div class="metric-label">Years of Service</div>
+            </div>
+            <div class="metric">
+              <div class="metric-num">1000+</div>
+              <div class="metric-label">Patients Supported</div>
+            </div>
+            <div class="metric">
+              <div class="metric-num">Same-Day</div>
+              <div class="metric-label">Appointments</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Booking & Staff Doctors</h2>
+        <p class="section-sub">Separate online booking pages + doctor categories.</p>
+
+        <div class="cards" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 14px;">
+          <article class="card">
+            <h3>Lab & Admin Booking</h3>
+            <p><a class="btn btn-ghost" href="/book/" style="margin-top:10px; display:inline-block;">Customer Booking</a></p>
+          </article>
+          <article class="card">
+            <h3>Labour Room (Labour/Delivery)</h3>
+            <p>Dr. Firdous → Labour Room</p>
+          </article>
+          <article class="card">
+            <h3>Doctor Categories</h3>
+            <p>
+              <strong>Dental</strong>: Dr. Sabith (MMBS) <br/>
+              <strong>Orthomology</strong>: Dr. Razi <br/>
+              <strong>General</strong>: Dr. Hashir Ali
+            </p>
+          </article>
+          <article class="card">
+            <h3>Category Links</h3>
+            <p>
+              Categories: <strong>Dental</strong>, <strong>Orthomology</strong>, <strong>General</strong>
+            </p>
+          </article>
+
+        </div>
+
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="contact-label">Phone</div>
+            <div class="contact-value">+91 9374083601</div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-label">Email</div>
+            <div class="contact-value">info@anasrahman@gmail.com</div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-label">Address</div>
+            <div class="contact-value">ponnani, chanda padi</div>
+          </div>
+        </div>
+
+        <div class="form-note">
+          <p><strong>Customer booking message:</strong> Please use the <b>Customer Booking</b> page to submit your request. Our staff will assign the correct doctor category.</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+
+  <script>
+    // Lightweight UI animations without external libraries
+    (function () {
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReduced) return;
+
+      const elements = document.querySelectorAll('[data-reveal], .card, .section, .hero-card');
+      const io = new IntersectionObserver((entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            e.target.classList.add('is-visible');
+            io.unobserve(e.target);
+          }
+        }
+      }, { threshold: 0.15 });
+
+      elements.forEach(el => {
+        el.classList.add('reveal');
+        io.observe(el);
+      });
+
+      // Add subtle parallax to header background orbs
+      const orbs = document.querySelectorAll('.orb');
+      const onMove = (ev) => {
+        const x = (ev.clientX / window.innerWidth) - 0.5;
+        const y = (ev.clientY / window.innerHeight) - 0.5;
+        orbs.forEach((orb, i) => {
+          const amt = (i + 1) * 10;
+          orb.style.transform = `translate(${x * amt}px, ${y * amt}px)`;
+        });
+      };
+      window.addEventListener('pointermove', onMove, { passive: true });
+    })();
+  </script>
+
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-brand">Anas Hospital</div>
+        <div class="footer-small">© {% now 'Y' %} • Dr. Anas Rahman</div>
+      </div>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
